@@ -51,9 +51,19 @@ export default function LocationVerify({ verified }: { verified: boolean }) {
 
     if (verified) {
         return (
-            <div className="flex items-center gap-2 bg-green-50 text-green-700 rounded-xl p-4 text-sm border border-green-100">
-                <MapPin className="w-4 h-4" />
-                동네 인증이 완료되었어요!
+            <div className="space-y-2">
+                <div className="flex items-center gap-2 bg-green-50 text-green-700 rounded-xl p-4 text-sm border border-green-100">
+                    <MapPin className="w-4 h-4" />
+                    동네 인증이 완료되었어요!
+                </div>
+                <button
+                    onClick={handleVerify}
+                    disabled={loading}
+                    className="w-full flex items-center justify-center gap-2 bg-gray-100 text-gray-600 py-2.5 rounded-xl text-sm font-medium hover:bg-gray-200 transition-colors disabled:opacity-50"
+                >
+                    <MapPin className="w-4 h-4" />
+                    {loading ? "위치 업데이트 중..." : "위치 다시 인증하기"}
+                </button>
             </div>
         );
     }

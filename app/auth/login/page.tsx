@@ -79,24 +79,6 @@ export default function LoginPage() {
                     </button>
                 </form>
 
-                <div className="relative">
-                    <div className="absolute inset-0 flex items-center">
-                        <div className="w-full border-t border-gray-200" />
-                    </div>
-                    <div className="relative flex justify-center text-xs">
-                        <span className="bg-gray-50 px-2 text-gray-400">
-                            또는
-                        </span>
-                    </div>
-                </div>
-
-                <button
-                    onClick={handleKakaoLogin}
-                    className="w-full bg-[#FEE500] text-[#191919] py-3 rounded-xl text-sm font-medium hover:bg-[#FDD835] transition-colors"
-                >
-                    카카오로 시작하기
-                </button>
-
                 <p className="text-center text-xs text-gray-400">
                     아직 계정이 없나요?{" "}
                     <Link
